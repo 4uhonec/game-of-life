@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GameOfLifeController">
+   <top>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <Button mnemonicParsing="false" onAction="#newGameButtonPressed" text="New game" />
+            <Button mnemonicParsing="false" onAction="#autoplayButtonPressed" text="Auto" />
+            <Button mnemonicParsing="false" onAction="#nextStepButtonPressed" text="Next step" />
+            <Label text="Speed">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#fasterButtonPressed" text="faster" />
+            <Button mnemonicParsing="false" onAction="#slowerButtonPressed" text="slower" />
+            <Label text="Grid size">
+               <padding>
+                  <Insets left="30.0" />
+               </padding>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#biggerButtonPressed" text="bigger" />
+            <Button mnemonicParsing="false" onAction="#smallerButtonPressed" text="smaller" />
+        </items>
+      </ToolBar>
+   </top>
+   <center>
+      <Canvas fx:id="canvas" height="600.0" width="600.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
